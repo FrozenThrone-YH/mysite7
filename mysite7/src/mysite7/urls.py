@@ -39,7 +39,6 @@ from vote.views import c_registe, c_update, c_delete
 
 urlpatterns = [
     path('a1/', admin.site.urls),
-    
     path('value/',test_value),
     #127.0.0.1:8000/숫자/로 요청하는 처리는 test_input 함수를 호출한다
     #호출할때 , 숫자값을 number변수에 인자값으로 사용한다. 
