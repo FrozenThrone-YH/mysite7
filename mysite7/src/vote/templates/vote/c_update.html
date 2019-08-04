@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+{# c_result : <tr><td>로 감싸진 <input>들 #}
+{# id : Question 객체 id #}
+{# detail_url : detail페이지의 주소 #}
+<h3> 설문조사 수정 페이지 </h3>
+<form action="" method='post'>
+	{% csrf_token %}
+	<table border=1> <!-- border속성을 넣어서 칸마다 실선 추가  -->
+		{{ c_result }}
+	</table>
+	<input type="submit" value="수정"/>
+</form>
+
+<a href="{% url 'detail' id %}">이전 페이지로 돌아가기</a>
+<!-- {{ detail_url }}  -->
+
+{% endblock %}

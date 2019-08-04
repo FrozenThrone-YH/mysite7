@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{# form : 제네릭뷰가 넘겨준 form객체 자체 #}
+{# form.as_p, as_ul, as_table 함수로 HTML 코드변환 및 출력 #}
+
+<h3> 글 작성 페이지 </h3>
+<!-- 웹 클라이언트가 서버에게 파일정보를 업로드하려면
+form태그의 enctype 속성에 "multipart/form-data"값을 
+저장해야함 이걸 이용해야지만 from을 이용해 파일을 전달해줄 수 있다. -->
+
+<form action='' method='post' enctype="multipart/form-data"> 
+<!-- post는 데이터가 숨겨져서 보내지고 GET은 주소애소 ?다음 값이 나오는 형태로  -->
+	{% csrf_token %}
+	<table width=50%>
+		{{ form.as_table }}
+	</table>
+	<input type="submit" value="갱신">	
+</form>
+
+
+
+{% endblock %}

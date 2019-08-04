@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{# c_rendered : form 태그에 집어넣을 문자열 형태의 input 태그들 #}
+<h3> 설문 조사 질문 생성 페이지</h3>
+
+<form action="" method="post">
+	{% csrf_token %}
+	{{ c_rendered }}
+	<input type="submit" value="질문 등록"/>
+	<!-- value는 버튼의 이름 -->
+</form>
+
+<a href="{% url 'main' %}"> 메인 페이지로 돌아가기 </a>
+
+{% endblock %}

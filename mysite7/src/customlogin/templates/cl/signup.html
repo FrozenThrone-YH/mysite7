@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3> 회원 가입 페이지 </h3>
+{# reuslt : input태그 문자열 #}
+<form action="" method='post'>
+	{% csrf_token %}
+	<table>
+		{{ result }}
+	</table>
+	<input type = 'submit' value = "회원가입"/>
+</form>
+
+</body>
+</html>
